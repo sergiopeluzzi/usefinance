@@ -1,4 +1,7 @@
 backend/node_modules
 frontend/node_modules
+angular1/node_modules
+angular4/node_modules
+angular1/public
 node_modules
 *.log
