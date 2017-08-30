@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Http, HttpModule } from '@angular/http'
 
 import { AppComponent } from './app.component';
 import { UseHeaderComponent } from "./header/header.component";
@@ -8,6 +9,10 @@ import { UseFooterComponent } from "./footer/footer.component";
 import { UseMenuComponent } from "./menu/menu.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { BillingCycleComponent } from "./billingCycle/billingCycle.component";
+import { ContentHeaderComponent } from "./common/components/contentHeader/contentHeader.component";
+import { GridSystemService } from "./common/services/gridSystem.service";
+import { ValueBoxComponent } from "./common/components/valueBox/valueBox.component";
+
 
 const useRoutes: Routes = [
   { 
@@ -31,16 +36,22 @@ const useRoutes: Routes = [
     UseFooterComponent,
     UseMenuComponent,
     DashboardComponent,
-    BillingCycleComponent
+    BillingCycleComponent,
+    ContentHeaderComponent,
+    ValueBoxComponent
+    
   ],
   imports: [
+    HttpModule,
     RouterModule.forRoot(
       useRoutes,
-      { enableTracing: true } // <- Debug only
+      { enableTracing: false } // <- Debug only
     ),
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    GridSystemService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
