@@ -12,6 +12,8 @@ import { BillingCycleComponent } from "./billingCycle/billingCycle.component";
 import { ContentHeaderComponent } from "./common/components/contentHeader/contentHeader.component";
 import { GridSystemService } from "./common/services/gridSystem.service";
 import { ValueBoxComponent } from "./common/components/valueBox/valueBox.component";
+import { BcFormComponent } from "./billingCycle/billingCycleForm/bcForm.component";
+import { FieldComponent } from "./common/components/field/field.component";
 
 
 const useRoutes: Routes = [
@@ -38,7 +40,9 @@ const useRoutes: Routes = [
     DashboardComponent,
     BillingCycleComponent,
     ContentHeaderComponent,
-    ValueBoxComponent
+    ValueBoxComponent,
+    BcFormComponent,
+    FieldComponent
     
   ],
   imports: [

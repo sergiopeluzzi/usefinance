@@ -1,1 +1,45 @@
-<h1>{{ title }}</h1>
+<use-content-header title="Ciclo de Pagamentos" subtitle="Cadastro"></use-content-header>
+
+<section class="content">
+    <div class="nav-tabs-custom">
+        <!-- Lista que cria as tabs no topo da página -->
+        <ul class="nav nav-tabs">
+            <li>
+                <a href data-target="#tabList" data-toggle="tab">
+                    <i class="fa fa0-bars"></i> Lista
+                </a>
+            </li>
+            <li>
+                <a href data-target="#tabCreate" data-toggle="tab">
+                    <i class="fa fa0-plus"></i> Incluir
+                </a>
+            </li>
+            <li>
+                <a href data-target="#tabUpdate" data-toggle="tab">
+                    <i class="fa fa0-pencil"></i> Alterar
+                </a>
+            </li>
+            <li>
+                <a href data-target="#tabDelete" data-toggle="tab">
+                    <i class="fa fa0-trash-o"></i> Excluir
+                </a>
+            </li>
+        </ul>
+        
+        <!-- Conteúdo das tabs -->
+        <div class="tab-content">
+            <div class="tab-pane" id="tabList">
+
+            </div>
+            <div class="tab-pane" id="tabCreate">
+                <bc-form></bc-form>
+            </div>
+            <div class="tab-pane" id="tabUpdate">
+                <bc-form></bc-form>
+            </div>
+            <div class="tab-pane" id="tabDelete">
+                <bc-form></bc-form>
+            </div>
+        </div>
+    </div>
+</section>
