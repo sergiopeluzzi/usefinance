@@ -29,7 +29,27 @@
         <!-- Conteúdo das tabs -->
         <div class="tab-content">
             <div class="tab-pane" id="tabList">
-
+                <ul>
+                    <li *ngFor="let bc of billingCycle">
+                        {{ bc.name }}
+                        <ul *ngFor="let credit of bc.credits">
+                            <li>
+                                {{ credit.name }}
+                            </li>
+                            <li>
+                                {{ credit.value }}
+                            </li>
+                        </ul>
+                        <ul *ngFor="let debt of bc.debts">
+                            <li>
+                                {{ debt.name }}
+                            </li>
+                            <li>
+                                {{ debt.value }}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <div class="tab-pane" id="tabCreate">
                 <bc-form></bc-form>
