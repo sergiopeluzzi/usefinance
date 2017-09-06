@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BillingCycleService } from '../billingCycle.service'
+import { MessagesService } from "../../common/services/messages.service";
 
 @Component({
   selector: 'bc-form',
@@ -7,7 +8,10 @@ import { BillingCycleService } from '../billingCycle.service'
 })
 export class BcFormComponent {
 
-  constructor(private billingCycleService: BillingCycleService) { }
+  constructor(
+    private billingCycleService: BillingCycleService,
+    private messages: MessagesService
+  ) { }
 
   create() {
     this.billingCycleService.postBillingCycles()
@@ -22,6 +26,6 @@ export class BcFormComponent {
   }
 
   toast() {
-
+    console.log(this.messages.addSuccess('Mensagem'))
   }
 }
