@@ -23,14 +23,12 @@
         "../node_modules/admin-lte/bootstrap/css/bootstrap.min.css",
         "../node_modules/admin-lte/dist/css/AdminLTE.min.css",
         "../node_modules/admin-lte/dist/css/skins/_all-skins.min.css",
-        "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css",
         "styles.css"
       ],
       "scripts": [
         "../node_modules/admin-lte/plugins/jQuery/jquery-2.2.3.min.js",
         "../node_modules/admin-lte/bootstrap/js/bootstrap.min.js",
         "../node_modules/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js",
-        "../node_modules/ng2-toastr/bundles/ng2-toastr.min.js",
         "../node_modules/admin-lte/dist/js/app.min.js"
       ],
       "environmentSource": "environments/environment.ts",

@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewContainerRef } from '@angular/core';
-import { ToastsManager } from "ng2-toastr/src/toast-manager";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,5 @@ import { ToastsManager } from "ng2-toastr/src/toast-manager";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public toastr: ToastsManager, vRef: ViewContainerRef) {
-    this.toastr.setRootViewContainerRef(vRef)
-  }
+  constructor() {}
 }
