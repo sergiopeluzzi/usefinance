@@ -3,13 +3,15 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class MessagesService {
-  constructor() {}
+  constructor() {
+      
+    }
   
   addMsg(msgs, title, method) {
     if (msgs instanceof Array) {
       //msgs.forEach(msg => this.toastr[method](msgs, title))
     } else {
-      //return this.toastr[method](msgs, title)
+      //this.toastr[method](msgs, title)
     }
   }
 

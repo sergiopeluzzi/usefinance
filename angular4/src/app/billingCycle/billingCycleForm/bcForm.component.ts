@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef } from '@angular/core';
 import { BillingCycleService } from '../billingCycle.service'
 import { MessagesService } from "../../common/services/messages.service";
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+
 
 @Component({
   selector: 'bc-form',
@@ -8,10 +10,10 @@ import { MessagesService } from "../../common/services/messages.service";
 })
 export class BcFormComponent {
 
-  constructor(
-    private billingCycleService: BillingCycleService,
-    private messages: MessagesService
-  ) { }
+  constructor(private billingCycleService: BillingCycleService, private messages: MessagesService,
+               public toastr: ToastsManager, vcr: ViewContainerRef) { 
+    this.toastr.setRootViewContainerRef(vcr)
+  }
 
   create() {
     this.billingCycleService.postBillingCycles()
@@ -26,6 +28,6 @@ export class BcFormComponent {
   }
 
   toast() {
-    console.log(this.messages.addSuccess('Mensagem'))
+    this.toastr.success('mensagem', 'Titulo', { enableHtml: false });
   }
 }

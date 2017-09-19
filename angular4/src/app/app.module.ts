@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { Http, HttpModule } from '@angular/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
 
 import { AppComponent } from './app.component';
 import { UseHeaderComponent } from "./header/header.component";
@@ -15,6 +16,7 @@ import { ContentHeaderComponent } from "./common/components/contentHeader/conten
 import { ValueBoxComponent } from "./common/components/valueBox/valueBox.component";
 import { BcFormComponent } from "./billingCycle/billingCycleForm/bcForm.component";
 import { FieldComponent } from "./common/components/field/field.component";
+import { BcListComponent } from "./billingCycle/billingCycleList/bcList.component";
 
 import { GridSystemService } from "./common/services/gridSystem.service";
 import { BillingCycleService } from "./billingCycle/billingCycle.service";
@@ -47,7 +49,8 @@ const useRoutes: Routes = [
     ContentHeaderComponent,
     ValueBoxComponent,
     BcFormComponent,
-    FieldComponent
+    FieldComponent,
+    BcListComponent
   ],
   imports: [
     HttpModule,
@@ -57,7 +60,8 @@ const useRoutes: Routes = [
     ),
     BrowserModule,
     BrowserAnimationsModule,
-    CommonModule
+    CommonModule,
+    ToastModule.forRoot()
   ],
   providers: [
     GridSystemService,
