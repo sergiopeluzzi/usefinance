@@ -1,7 +1,7 @@
 import { Component, ViewContainerRef } from '@angular/core';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { BillingCycleService } from '../billingCycle.service'
 import { MessagesService } from "../../common/services/messages.service";
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 
 @Component({
@@ -9,14 +9,13 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
   templateUrl: './bcForm.component.html'
 })
 export class BcFormComponent {
-
-  constructor(private billingCycleService: BillingCycleService, private messages: MessagesService,
-               public toastr: ToastsManager, vcr: ViewContainerRef) { 
+  constructor(private billingCycleService: BillingCycleService, messages: MessagesService, public toastr: ToastsManager, vcr: ViewContainerRef) { 
     this.toastr.setRootViewContainerRef(vcr)
   }
 
-  create() {
-    this.billingCycleService.postBillingCycles()
+  create(form: any) {
+    //this.billingCycleService.postBillingCycles()
+    console.log(form)
   }
 
   update() {
@@ -25,6 +24,10 @@ export class BcFormComponent {
 
   delete() {
     console.log('deleting')
+  }
+
+  onSubmit(form: any): void {
+    console.log('you submited value:', form)
   }
 
   toast() {
