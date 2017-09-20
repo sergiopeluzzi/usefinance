@@ -10,8 +10,10 @@ import { BillingCycle } from '../billingCycle.model'
 export class BcListComponent {
   @Input() billingCycles: BillingCycle[]
 
-  constructor(private billingCycleService: BillingCycleService) {
+  constructor(private billingCycleService: BillingCycleService) { }
+
+  ngOnInit() {
     this.billingCycleService.getBillingCycles()
-      .subscribe( res => this.billingCycles = res ) 
-    }
+      .subscribe( res => this.billingCycles = res )
+  }
 }

@@ -1,9 +1,9 @@
 <form #f="ngForm">
     <div role="form">
         <div class="box-body">
-            <use-field name="name" type="text" label="Nome" ph="Informe o nome" grid="12 8 4"></use-field>
-            <use-field name="month" type="number" label="Mês" ph="Informe o mês" grid="12 8 4"></use-field>
-            <use-field name="year" type="number" label="Ano" ph="Informe o ano" grid="12 8 4"></use-field>
+            <use-field name="name" type="text" label="Nome" ph="Informe o nome" grid="12 8 4" ngDefaultControl ngModel></use-field>
+            <use-field name="month" type="number" label="Mês" ph="Informe o mês" grid="12 8 4" ngDefaultControl ngModel></use-field>
+            <use-field name="year" type="number" label="Ano" ph="Informe o ano" grid="12 8 4" ngDefaultControl ngModel></use-field>
         </div>
         <div class="box-footer">
             <button (click)="create(f.value)" class="btn btn-primary">Incluir</button>
