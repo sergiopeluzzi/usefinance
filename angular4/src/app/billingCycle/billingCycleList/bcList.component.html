@@ -14,8 +14,8 @@
                 <td>{{ bc.month }}</td>
                 <td>{{ bc.year }}</td>
                 <td class="table-actions">
-                    <button class="btn btn-warning"><i class="fa fa-pencil"></i></button>
-                    <button class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+                    <button class="btn btn-warning"><i class="fa fa-pencil" (click)="showTabUpdate(bc)"></i></button>
+                    <button class="btn btn-danger"><i class="fa fa-trash-o" (click)="showTabDelete(bc)"></i></button>
                 </td>
             </tr>
         </tbody>

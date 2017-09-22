@@ -23,3 +23,4 @@ export class MessagesService {
     return this.addMsg(msgs, 'Erro', 'error')
   }
 }
+

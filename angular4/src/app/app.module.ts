@@ -23,6 +23,7 @@ import { BcListComponent } from "./billingCycle/billingCycleList/bcList.componen
 import { GridSystemService } from "./common/services/gridSystem.service";
 import { BillingCycleService } from "./billingCycle/billingCycle.service";
 import { MessagesService } from "./common/services/messages.service";
+import { TabsService } from "./common/services/tabs.service";
 
 
 const useRoutes: Routes = [
@@ -70,6 +71,7 @@ const useRoutes: Routes = [
     GridSystemService,
     BillingCycleService,
     MessagesService,
+    TabsService
   ],
   bootstrap: [AppComponent]
 })

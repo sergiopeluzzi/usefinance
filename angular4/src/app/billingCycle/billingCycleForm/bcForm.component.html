@@ -6,9 +6,9 @@
             <use-field name="year" type="number" label="Ano" ph="Informe o ano" grid="12 8 4" ngDefaultControl ngModel></use-field>
         </div>
         <div class="box-footer">
-            <button (click)="create(f.value)" class="btn btn-primary">Incluir</button>
-            <button (click)="update()" class="btn btn-info">Alterar</button>
-            <button (click)="delete()" class="btn btn-danger">Excluir</button>
+            <button (click)="create(f.value)" class="btn btn-primary" *ngIf="tabCreate">Incluir</button>
+            <button (click)="update()" class="btn btn-info" *ngIf="tabUpdate">Alterar</button>
+            <button (click)="delete()" class="btn btn-danger" *ngIf="tabDelete">Excluir</button>
             <button (click)="toast()" class="btn btn-default">Cancelar </button>
         </div>
     </div>

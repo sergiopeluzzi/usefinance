@@ -22,8 +22,6 @@ export class BillingCycleService {
         let headers = new Headers({ 'Content-Type': 'application/json' })
         let options = new RequestOptions({ headers: headers })
         
-        console.log(form)
-
         return this.http.post(this.url, form, options)
                 .map(res => res.json())
                 .catch(this.handleError)
@@ -37,7 +35,6 @@ export class BillingCycleService {
     }
 
     private handleError (error: Response | any) {
-        console.error(error.message || error);
         return Observable.throw(error.message || error);
     }
 

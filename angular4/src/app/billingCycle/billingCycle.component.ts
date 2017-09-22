@@ -2,6 +2,8 @@ import { Component, Input  } from '@angular/core';
 import { Observable } from 'rxjs'
 
 import { BillingCycleService } from './billingCycle.service'
+import { TabsService } from '../common/services/tabs.service'
+
 import { BillingCycle } from './billingCycle.model'
 
 
@@ -12,11 +14,14 @@ import { BillingCycle } from './billingCycle.model'
 export class BillingCycleComponent {
   @Input() billingCycle: BillingCycle[]
   
+
   //Injeção de pendencia do serviço
-  constructor(private billingCycleService: BillingCycleService){ }
+  constructor(private billingCycleService: BillingCycleService, public tabs: TabsService){ }
 
   ngOnInit() {
     this.getAll()
+    this.tabs.show(this, { tabList: true, tabCreate: true })
+    console.log(this)
   }
 
   //pega os dados mapeado em json e faz um subscribe 
